@@ -1,32 +1,108 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home1</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss">
+	@charset "utf-8";
 
-#nav {
-  padding: 30px;
+	/* 禁用iPhone中Safari的字号自动调整 */
+	html {
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		/* 解决IOS默认滑动很卡的情况 */
+		-webkit-overflow-scrolling : touch;
+	}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+	/* 禁止缩放表单 */
+	input[type="submit"], input[type="reset"], input[type="button"], input {
+		resize: none;
+		border: none;
+	}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+	/*去除点击高亮效果*/
+	a,button,input,select,img,label{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;outline:medium none;}
+	textarea{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		outline: none;
+		font: normal 14px -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+		-webkit-appearance: none;
+	}
+	input::-moz-focus-inner{border:none;padding:0;}
+	select, input{vertical-align:middle;}
+	/*去掉苹果的默认UI来渲染按钮*/
+	input[type="submit"],input[type="reset"],input[type="button"],button,select{-webkit-appearance:none;}
+	input:focus{outline:none;}
+	input:required:invalid{box-shadow: none;-moz-box-shadow:none}
+	::-webkit-input-placeholder{color:#bbb;}
+	::-moz-placeholder{color:#bbb;}
+	/* 设置HTML5元素为块 */
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+
+	/* 初始化 */
+	body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font: 12px/1.5 PingFangSC-Regular,'Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+		color: #555;
+		background-color: #F7F7F7;
+		-webkit-tap-highlight-color:transparent;
+	}
+	body::-webkit-scrollbar {
+		width: 0;
+		height: 6px;
+	}
+	@media screen and (min-width: 1024px) {
+		body{
+			width: 740px;
+			margin: auto;
+		}
+	}
+	em, i {
+		font-style: normal;
+	}
+	ul,ol,li{
+		list-style-type: none;
+	}
+	.clearfix:after {
+		content: "";
+		display: block;
+		visibility: hidden;
+		height: 0;
+		clear: both;
+	}
+	.clearfix {
+		zoom: 1;
+	}
+	a {
+		text-decoration: none;
+		color: #576b95;
+		font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	ul, ol {
+		list-style: none;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 100%;
+		font-family: 'Microsoft YaHei';
+	}
+	img {
+		border: none;
+	}
+	input{
+		font-family: -apple-system-font, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+	}
+	@media print {
+		.print-button-container{
+			display: none;
+		}
+	}
 </style>
