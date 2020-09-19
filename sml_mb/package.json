@@ -10,6 +10,7 @@
   "dependencies": {
     "@do1/quickwork-mobile": "^1.6.6",
     "core-js": "^3.4.4",
+    "dayjs": "^1.8.36",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
     "vue": "^2.6.10",

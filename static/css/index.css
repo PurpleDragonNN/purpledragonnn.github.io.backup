@@ -1,0 +1,36 @@
+.container {
+    font-size: 20px;
+    color: #9586bf;
+}
+.time-block {
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f5f6f7;
+}
+.qw-icon-time {
+    margin-left: 4px;
+}
+.time {
+    font-size: 20px;
+}
+.result {
+    text-align: center;
+}
+.qw-button {
+    width: 20%;
+    margin: 0 auto;
+    background: #9586bf;
+}
+.res-text {
+    margin-top: 20px;
+    text-align: center;
+}
+b {
+    font-weight: bold;
+    font-size: 24px;
+    color: palevioletred;
+}

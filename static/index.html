@@ -6,20 +6,30 @@
 	<title>Title</title>
 	<!-- 引入样式 -->
 	<link rel="stylesheet" href="https://qwcdn.do1.com.cn/libs/quickwork/wap/1.6.8/theme/index.css"/>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/index.css"/>
 	<script src="js/vue.js"></script>
 	<!-- 引入组件库 -->
 	<script src="https://qwcdn.do1.com.cn/libs/quickwork/wap/1.6.8/index.js"></script>
+
+	<script>
+	</script>
 </head>
 <body>
  <div id="app">
-	 <qw-button>默认按钮</qw-button>
+	 <button-counter></button-counter>
  </div>
-
-
-<script>
-  var vm = new Vue({
+ <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+ <script src="https://unpkg.com/dayjs@1.8.21/plugin/utc.js"></script>
+ <script>
+   dayjs.extend(window.dayjs_plugin_utc)
+ </script>
+ <script src="components/index.js"></script>
+ <script>
+  new Vue({
     el: '#app',
   })
+
 </script>
 </body>
 </html>
